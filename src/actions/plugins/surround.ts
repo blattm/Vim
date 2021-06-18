@@ -140,7 +140,7 @@ class YankSurroundOperator extends SurroundOperator {
 @RegisterAction
 class CommandSurroundModeStartVisual extends SurroundOperator {
   modes = [Mode.Visual];
-  keys = ['S'];
+  keys = ['s'];
 
   public async run(vimState: VimState, start: Position, end: Position): Promise<void> {
     [start, end] = sorted(start, end);
@@ -152,7 +152,7 @@ class CommandSurroundModeStartVisual extends SurroundOperator {
 @RegisterAction
 class CommandSurroundModeStartVisualLine extends SurroundOperator {
   modes = [Mode.VisualLine];
-  keys = ['S'];
+  keys = ['s'];
 
   public async run(vimState: VimState, start: Position, end: Position): Promise<void> {
     [start, end] = sorted(start.getLineBegin(), end.getLineEnd());

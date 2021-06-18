@@ -368,16 +368,16 @@ suite('surround plugin', () => {
   // Visual mode tests
 
   newTest({
-    title: "'S)' surrounds visual selection without space",
+    title: "'s)' surrounds visual selection without space",
     start: ['first li|ne test'],
-    keysPressed: 'viwS)',
+    keysPressed: 'viws)',
     end: ['first (li|ne) test'],
   });
 
   newTest({
-    title: "'S(' surrounds visual selection with space",
+    title: "'s(' surrounds visual selection with space",
     start: ['first li|ne test'],
-    keysPressed: 'viwS(',
+    keysPressed: 'viws(',
     end: ['first ( l|ine ) test'],
   });
 
@@ -398,23 +398,23 @@ suite('surround plugin', () => {
   });
 
   newTest({
-    title: "'S)' surrounds visual line selection without space",
+    title: "'s)' surrounds visual line selection without space",
     start: ['first', 'sec|ond', 'third'],
-    keysPressed: 'VS)',
+    keysPressed: 'Vs)',
     end: ['first', '(', 'second', '|)', 'third'],
   });
 
   newTest({
-    title: "'S(' surrounds visual line selection with space",
+    title: "'s(' surrounds visual line selection with space",
     start: ['first', 'sec|ond', 'third'],
-    keysPressed: 'VS(',
+    keysPressed: 'Vs(',
     end: ['first', '( ', 'second', '| )', 'third'],
   });
 
   newTest({
-    title: "'S<div>' surrounds visual line selection with <div></div>",
+    title: "'s<div>' surrounds visual line selection with <div></div>",
     start: ['first', 'sec|ond', 'third'],
-    keysPressed: 'VS<',
+    keysPressed: 'Vs<',
     end: ['first', '<div>', 'second', '|</div>', 'third'],
     stub: {
       stubClass: CommandSurroundAddSurroundingTag,
@@ -428,7 +428,7 @@ suite('surround plugin', () => {
   newTest({
     title: 'visual surround with multicursor',
     start: ['one |two three, one two three'],
-    keysPressed: 'gbgb' + 'S)' + '<esc>' + '0', // 0: fix cursor pos, see above
+    keysPressed: 'gbgb' + 's)' + '<esc>' + '0', // 0: fix cursor pos, see above
     end: ['|one (two) three, one (two) three'],
   });
 
